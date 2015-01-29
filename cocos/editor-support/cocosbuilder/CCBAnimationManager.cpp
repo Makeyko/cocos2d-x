@@ -609,7 +609,11 @@ ActionInterval* CCBAnimationManager::getEaseAction(ActionInterval *pAction, CCBK
     }
     else
     {
+<<<<<<< HEAD
         log("CCBReader: Unknown easing type %d", static_cast<int>(easingType));
+=======
+        log("CCBReader: Unkown easing type %d", static_cast<int>(easingType));
+>>>>>>> Fixed warnings
         return pAction;
     }
 }

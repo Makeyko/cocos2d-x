@@ -375,7 +375,10 @@ bool  Bundle3D::loadMeshDatasBinary(MeshDatas& meshdatas)
         CCLOG("warning: Failed to read meshdata: attribCount '%s'.", _path.c_str());
         return false;
     }
+<<<<<<< HEAD
     MeshData*   meshData = nullptr;
+=======
+>>>>>>> Fixed warnings
     for(unsigned int i = 0; i < meshSize ; i++ )
     {
          unsigned int attribSize=0;
@@ -709,7 +712,11 @@ bool  Bundle3D::loadMeshDatasJson(MeshDatas& meshdatas)
         MeshVertexAttrib tempAttrib;
         meshData->attribCount=mesh_vertex_attribute.Size();
         meshData->attribs.resize(meshData->attribCount);
+<<<<<<< HEAD
         for (rapidjson::SizeType i = 0; i < mesh_vertex_attribute.Size(); i++)
+=======
+		for (rapidjson::SizeType i = 0; i < mesh_vertex_attribute.Size(); i++)
+>>>>>>> Fixed warnings
         {
             const rapidjson::Value& mesh_vertex_attribute_val = mesh_vertex_attribute[i];
 
@@ -1396,7 +1403,11 @@ bool Bundle3D::loadAnimationDataJson(const std::string& id, Animation3DData* ani
 
     if(!id.empty())
     {
+<<<<<<< HEAD
         for (rapidjson::SizeType i = 0; i < animation_data_array.Size(); i++)
+=======
+		for (rapidjson::SizeType i = 0; i < animation_data_array.Size(); i++)
+>>>>>>> Fixed warnings
         {
             if(animation_data_array[i][ID].GetString() == id)
             {
