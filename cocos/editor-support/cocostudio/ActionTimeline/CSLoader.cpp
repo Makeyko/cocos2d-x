@@ -874,6 +874,9 @@ Node* CSLoader::nodeWithFlatBuffers(const flatbuffers::NodeTree *nodetree)
         
         NodeReaderProtocol* reader = dynamic_cast<NodeReaderProtocol*>(ObjectFactory::getInstance()->createObject(readername));
         node = reader->createNodeWithFlatBuffers(options->data());
+        if (dynamic_cast<ImageView*>(node) || dynamic_cast<Sprite*>(node)) {
+            node->setAnchorPoint(Point(0.5f, 0.5f));
+        }
         
         Widget* widget = dynamic_cast<Widget*>(node);
         if (widget)
@@ -1202,6 +1205,7 @@ Node* CSLoader::nodeWithFlatBuffersForSimulator(const flatbuffers::NodeTree *nod
         
         NodeReaderProtocol* reader = dynamic_cast<NodeReaderProtocol*>(ObjectFactory::getInstance()->createObject(readername));
         node = reader->createNodeWithFlatBuffers(options->data());
+
         
         Widget* widget = dynamic_cast<Widget*>(node);
         if (widget)

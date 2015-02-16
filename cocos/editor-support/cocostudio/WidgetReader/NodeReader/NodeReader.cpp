@@ -467,8 +467,8 @@ namespace cocostudio
         //    float rotation      = options.rotation();
         float rotationSkewX      = options->rotationSkew()->rotationSkewX();
         float rotationSkewY      = options->rotationSkew()->rotationSkewY();
-        float anchorx       = options->anchorPoint()->scaleX();
-        float anchory       = options->anchorPoint()->scaleY();
+//        float anchorx       = options->anchorPoint()->scaleX();
+//        float anchory       = options->anchorPoint()->scaleY();
         int zorder		    = options->zOrder();
         int tag             = options->tag();
         int actionTag       = options->actionTag();
@@ -492,13 +492,13 @@ namespace cocostudio
             node->setRotationSkewX(rotationSkewX);
         if (rotationSkewY != 0)
             node->setRotationSkewY(rotationSkewY);
-        if(anchorx != 0.5f || anchory != 0.5f)
-            node->setAnchorPoint(Point(anchorx, anchory));
+//        if(anchorx != 0.5f || anchory != 0.5f)
+//            node->setAnchorPoint(Point(anchorx, anchory));
         if(zorder != 0)
             node->setLocalZOrder(zorder);
         if(visible != true)
             node->setVisible(visible);
-//        if (w != 0 || h != 0)
+        if (w != 0 || h != 0)
             node->setContentSize(Size(w, h));
         if (alpha != 255)
             node->setOpacity(alpha);

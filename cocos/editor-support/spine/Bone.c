@@ -36,6 +36,9 @@ static int yDown;
 void spBone_setYDown (int value) {
 	yDown = value;
 }
+int spBone_getYDown () {
+    return yDown;
+}
 
 spBone* spBone_create (spBoneData* data, spSkeleton* skeleton, spBone* parent) {
 	spBone* self = NEW(spBone);

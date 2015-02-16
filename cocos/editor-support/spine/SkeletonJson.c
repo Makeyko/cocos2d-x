@@ -200,9 +200,13 @@ static spAnimation* _spSkeletonJson_readAnimation (spSkeletonJson* self, Json* r
 				if (duration > animation->duration) animation->duration = duration;
 
 			} else {
-				int isScale = strcmp(timelineArray->name, "scale") == 0;
-				if (isScale || strcmp(timelineArray->name, "translate") == 0) {
+                int isFlipX = strcmp(timelineArray->name, "flipX") == 0;
+                int isScale = strcmp(timelineArray->name, "scale") == 0;
+				if (isScale || isFlipX || strcmp(timelineArray->name, "translate") == 0) {
 					float scale = isScale ? 1 : self->scale;
+                    if (isFlipX) {
+                        scale = -1;
+                    }
 					spTranslateTimeline *timeline =
 							isScale ? spScaleTimeline_create(timelineArray->size) : spTranslateTimeline_create(timelineArray->size);
 					timeline->boneIndex = boneIndex;

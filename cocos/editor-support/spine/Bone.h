@@ -55,6 +55,7 @@ struct spBone {
 };
 
 void spBone_setYDown (int/*bool*/yDown);
+int spBone_getYDown();
 
 /* @param parent May be 0. */
 spBone* spBone_create (spBoneData* data, struct spSkeleton* skeleton, spBone* parent);
