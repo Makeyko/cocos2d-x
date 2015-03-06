@@ -90,6 +90,8 @@ public:
     inline void setTag(int tag) { _tag = tag; }
     inline int getTag() const { return _tag; }
     
+    //inline PhysicsShapeInfo* getInfo() const {return _info;};
+    
     /** get mass */
     inline float getMass() const { return _mass; }
     /** Set mass, it will change the body's mass this shape attaches */
