@@ -194,13 +194,8 @@ MeshCommand::~MeshCommand()
 
 void MeshCommand::applyRenderState()
 {
-<<<<<<< HEAD
-    _renderStateCullFaceEnabled = glIsEnabled(GL_CULL_FACE) != GL_FALSE;
-    _renderStateDepthTest = glIsEnabled(GL_DEPTH_TEST) != GL_FALSE;
-=======
     _renderStateCullFace = glIsEnabled(GL_CULL_FACE) != GL_FALSE;
 	_renderStateDepthTest = glIsEnabled(GL_DEPTH_TEST) != GL_FALSE;
->>>>>>> Fixed warnings
     glGetBooleanv(GL_DEPTH_WRITEMASK, &_renderStateDepthWrite);
     GLint cullface;
     glGetIntegerv(GL_CULL_FACE_MODE, &cullface);

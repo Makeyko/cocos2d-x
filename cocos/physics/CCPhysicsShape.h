@@ -133,17 +133,11 @@ public:
      */
     inline int getTag() const { return _tag; }
     
-<<<<<<< HEAD
-    //inline PhysicsShapeInfo* getInfo() const {return _info;};
-    
-    /** get mass */
-=======
     /**
      * Get the mass of this shape.
      *
      * @return A float number.
      */
->>>>>>> cocos2d-x-3.5
     inline float getMass() const { return _mass; }
     
     /**

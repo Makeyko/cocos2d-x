@@ -922,8 +922,7 @@ Node* CSLoader::nodeWithFlatBuffers(const flatbuffers::NodeTree *nodetree, const
                 reader->setPropsWithFlatBuffers(node, options->data());
             }
         }
-<<<<<<< HEAD
-        std::string readername = getGUIClassName(classname);
+        /*std::string readername = getGUIClassName(classname);
         readername.append("Reader");
         
         NodeReaderProtocol* reader = dynamic_cast<NodeReaderProtocol*>(ObjectFactory::getInstance()->createObject(readername));
@@ -933,10 +932,8 @@ Node* CSLoader::nodeWithFlatBuffers(const flatbuffers::NodeTree *nodetree, const
         }
         
         Widget* widget = dynamic_cast<Widget*>(node);
-        if (widget)
-=======
+        if (widget)*/
         else
->>>>>>> cocos2d-x-3.5
         {
             std::string customClassName = nodetree->customClassName()->c_str();
             if (customClassName != "")
@@ -1290,15 +1287,10 @@ Node* CSLoader::nodeWithFlatBuffersForSimulator(const flatbuffers::NodeTree *nod
         readername.append("Reader");
         
         NodeReaderProtocol* reader = dynamic_cast<NodeReaderProtocol*>(ObjectFactory::getInstance()->createObject(readername));
-<<<<<<< HEAD
-        node = reader->createNodeWithFlatBuffers(options->data());
-
-=======
         if (reader)
         {
             node = reader->createNodeWithFlatBuffers(options->data());
         }
->>>>>>> cocos2d-x-3.5
         
         Widget* widget = dynamic_cast<Widget*>(node);
         if (widget)
