@@ -88,7 +88,7 @@ bool PhysicsJoint::initJoint()
         for (auto subjoint : _cpConstraints)
         {
             subjoint->maxForce = _maxForce;
-            subjoint->errorBias = cpfpow(1.0f - 0.15f, 60.0f);
+            subjoint->errorBias = cpfpow(1.0f - 0.35f, 60.0f);
             cpSpaceAddConstraint(_world->_cpSpace, subjoint);
         }
         _initDirty = false;
