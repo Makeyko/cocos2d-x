@@ -922,17 +922,6 @@ Node* CSLoader::nodeWithFlatBuffers(const flatbuffers::NodeTree *nodetree, const
                 reader->setPropsWithFlatBuffers(node, options->data());
             }
         }
-        /*std::string readername = getGUIClassName(classname);
-        readername.append("Reader");
-        
-        NodeReaderProtocol* reader = dynamic_cast<NodeReaderProtocol*>(ObjectFactory::getInstance()->createObject(readername));
-        node = reader->createNodeWithFlatBuffers(options->data());
-        if (dynamic_cast<ImageView*>(node) || dynamic_cast<Sprite*>(node)) {
-            node->setAnchorPoint(Point(0.5f, 0.5f));
-        }
-        
-        Widget* widget = dynamic_cast<Widget*>(node);
-        if (widget)*/
         else
         {
             std::string customClassName = nodetree->customClassName()->c_str();
@@ -1015,8 +1004,6 @@ Node* CSLoader::nodeWithFlatBuffers(const flatbuffers::NodeTree *nodetree, const
                 }
             }
         }
-        
-        //    _loadingNodeParentHierarchy.pop_back();
         
         return node;
     }
